@@ -1,0 +1,6 @@
+.HoverDot {
+  cursor: none;
+  &:hover {
+    cursor: none !important;
+  }
+}

@@ -1,0 +1,33 @@
+@import 'index';
+
+.SectionLink {
+  color: $color-primary-white;
+  position: relative;
+  display: block;
+  cursor: none;
+
+  &:hover &__Name {
+    transform: translateX(80px);
+  }
+  &:hover &__Icon {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+
+  &__Name {
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &__Icon {
+    position: absolute;
+    opacity: 0;
+    top: 20%;
+    left: 0;
+    font-size: 5rem;
+    transition: all 0.4s ease-in-out 0.1s;
+    pointer-events: none;
+  }
+}
