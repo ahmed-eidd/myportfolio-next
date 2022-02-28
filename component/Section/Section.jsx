@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Section = ({ id }) => {
+const Section = ({ id, children }) => {
   return (
     <div id={id} style={{ height: '100vh' }}>
-      Section
+      {children}
     </div>
   );
 };
