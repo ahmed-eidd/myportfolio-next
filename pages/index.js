@@ -8,15 +8,18 @@ import Layout from '../component/Layout/Layout';
 import Project from '../component/Project/Project';
 import { motion } from 'framer-motion';
 import Projects from '../component/Projects/Projects';
+import AboutMe from '../component/AboutMe/AboutMe';
+import Tabs from '../component/Tabs/Tabs';
 
 export default function Home() {
   return (
     <Layout>
       <Header />
       <Projects />
-      {/* <Link name='test' href='#' /> */}
-      <Section id='ref2' />
-      <Section id='ref3' />
+      <AboutMe />
+      <Tabs>
+        <p> hello world </p>
+      </Tabs>
     </Layout>
   );
 }

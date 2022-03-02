@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Project from '../Project/Project';
 import classes from './Projects.module.scss';
+import { projectsConfing } from './ProjectsConfig';
 
 const vr = {
   hidden: {
@@ -14,6 +15,7 @@ const vr = {
     transition: {
       ease: [0.6, 0.01, -0.05, 0.95],
       duration: 1.6,
+      repeat: 'none',
     },
   },
   // exit: {
@@ -37,15 +39,21 @@ const Projects = () => {
         },
       }}
       initial='hidden'
-
-      whileInView='show'
+      animate='show'
       // exit='hidden'
       id='ref1'
     >
-      <Project variants={vr} />
-      <Project variants={vr} reverse />
-      <Project variants={vr} />
-      <Project variants={vr} reverse />
+      {projectsConfing.map((prj, i) => (
+        <Project
+          variants={vr}
+          name={prj.name}
+          description={prj.description}
+          img={prj.img}
+          link={prj.link}
+          skills={prj.tech}
+          key={prj.name}
+        />
+      ))}
     </motion.div>
   );
 };

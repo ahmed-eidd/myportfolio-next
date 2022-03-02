@@ -1,0 +1,18 @@
+@import 'index';
+
+.Tabs {
+  &__TabItemsList {
+    padding: 1rem;
+    display: flex;
+    position: relative;
+  }
+}
+
+.Slider {
+  position: absolute;
+  background-color: $color-primary-gray;
+  border-radius: $radius-sm;
+  width: 11.5rem;
+  height: 10rem;
+  
+}

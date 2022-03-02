@@ -1,0 +1,18 @@
+@import 'index';
+
+.Skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Skill {
+  font-weight: bold;
+  background-color: $color-primary-gray;
+  color: $color-primary-white;
+  font-size: 1.4rem;
+  padding: 1rem 1.5rem;
+  border-radius: $radius-sm;
+}

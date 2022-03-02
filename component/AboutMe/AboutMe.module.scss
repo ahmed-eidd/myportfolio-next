@@ -1,0 +1,16 @@
+@import 'index';
+
+.AboutMe {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__Content {
+    height: clamp(50%, 60vh, 90%);
+    width: clamp(80%, 60vw, 90%);
+    background-color: $color-primary-darker;
+    z-index: 100;
+    border-radius: $radius-sm;
+  }
+}
