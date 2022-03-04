@@ -67,8 +67,9 @@ const Slider = ({ style, ...props }) => {
   return (
     <motion.div
       className={classes.Slider}
-      positionTransition={{
-        bounceStiffness: 100,
+      layout
+      positiontransition={{
+        bounceStiffness: 200,
       }}
       initial={false}
       animate={style}

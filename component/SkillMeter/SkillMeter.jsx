@@ -13,6 +13,7 @@ const SkillMeter = ({
 }) => {
   const [inView, setInView] = useState(false);
   const ref = useRef();
+  const [number, setNumber] = useState(0);
 
   // useEffect(() => {
   //   if (inView) {
@@ -70,7 +71,8 @@ const SkillMeter = ({
           ref={ref}
           className={classes.SkillMeter__Percentage}
         >
-          {variants.show.width}
+          {/* {variants.show.width} */}
+          {number?.toFixed(0)}%
         </motion.p>
       </div>
       <div className={extendClasses(classes.SkillMeter__Meter)}>
@@ -87,10 +89,10 @@ const SkillMeter = ({
           //   duration: 1.6,
           //   repeat: 'none',
           // }}
-          onAnimationStart={() => {
-            console.log('start');
+          onUpdate={({ width }) => {
+            console.log(width);
+            setNumber(parseInt(width));
           }}
-          
           variants={variants}
         ></motion.div>
       </div>
