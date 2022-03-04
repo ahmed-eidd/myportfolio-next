@@ -9,7 +9,7 @@ const MouseContextProvider = (props) => {
   const [cursorType, setCursorType] = useState(false);
   const cursorChangeHandler = (cursorType) => {
     setCursorType(cursorType);
-    console.log('clicked');
+    // console.log('clicked');
   };
   // useEffect(() => {
   //   const mouseClickHandler = () => {

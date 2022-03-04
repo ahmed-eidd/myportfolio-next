@@ -7,10 +7,46 @@
   align-items: center;
 
   &__Content {
-    height: clamp(50%, 60vh, 90%);
+    min-height: 60vh;
     width: clamp(80%, 60vw, 90%);
     background-color: $color-primary-darker;
     z-index: 100;
     border-radius: $radius-sm;
   }
+
+  &__Tabs {
+    width: 50%;
+  }
+
+  &__Skills,
+  &__Experience,
+  &__Education {
+    background-color: $color-primary-gray;
+    border-radius: $radius-sm;
+  }
+
+  &__Skills {
+    padding: 1.5rem;
+    &__Skill {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 0;
+    }
+  }
+}
+
+.green {
+  background-color: $color-green;
+}
+
+.orange {
+  background-color: $color-orange;
+}
+
+.yellow {
+  background-color: $color-yellow;
+}
+
+.purple {
+  background-color: $color-purple;
 }

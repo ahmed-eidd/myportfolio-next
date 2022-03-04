@@ -31,6 +31,7 @@ const Projects = () => {
   return (
     <motion.div
       className={classes.Projects}
+      viewport={{ once: true }}
       variants={{
         show: {
           transition: {
@@ -39,7 +40,7 @@ const Projects = () => {
         },
       }}
       initial='hidden'
-      animate='show'
+      whileInView='show'
       // exit='hidden'
       id='ref1'
     >

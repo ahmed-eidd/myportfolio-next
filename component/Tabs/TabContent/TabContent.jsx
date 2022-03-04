@@ -23,7 +23,7 @@ const TabContent = ({ children, index }) => {
             tabIndex={index === i ? 0 : -1}
             className={classes.Content}
           >
-            {console.log(index === i)}
+            {/* {console.log(index === i)} */}
             {child}
           </div>
         ))}

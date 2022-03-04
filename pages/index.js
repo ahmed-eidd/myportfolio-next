@@ -17,9 +17,6 @@ export default function Home() {
       <Header />
       <Projects />
       <AboutMe />
-      <Tabs>
-        <p> hello world </p>
-      </Tabs>
     </Layout>
   );
 }
