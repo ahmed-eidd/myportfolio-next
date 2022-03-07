@@ -59,3 +59,23 @@ body {
     pointer-events: none !important;
   }
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $color-primary-darker;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $color-primary-white;
+  border-radius: $radius-sm
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $color-primary-white;
+}

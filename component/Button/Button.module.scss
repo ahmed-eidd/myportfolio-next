@@ -2,10 +2,11 @@
 
 .Button {
   padding: 1rem 3rem;
-  color: $color-primary-gray;
-  background-color: $color-primary-white;
-  border-radius: $radius-lg;
-  border: none;
+  color: $color-primary-white;
+  background-color: $color-primary-darker;
+  border: 1px solid $color-primary-white;
+  border-radius: $radius-sm;
+  // border: none;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 1.6rem;
@@ -16,4 +17,10 @@
   p {
     padding: 0;
   }
+}
+
+.theme {
+  background-color: $color-primary-white;
+  border: none;
+  color: $color-primary-darker;
 }
