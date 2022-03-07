@@ -10,6 +10,8 @@ const SkillMeter = ({
   color,
   variants,
   textVariant,
+  animate,
+  hidden,
 }) => {
   const [inView, setInView] = useState(false);
   const ref = useRef();
@@ -70,9 +72,11 @@ const SkillMeter = ({
           variants={textVariant}
           ref={ref}
           className={classes.SkillMeter__Percentage}
+          animate={animate}
+          initial={hidden}
         >
           {/* {variants.show.width} */}
-          {number?.toFixed(0)}%
+          {number < 0 ? 0 : number?.toFixed(0)}%
         </motion.p>
       </div>
       <div className={extendClasses(classes.SkillMeter__Meter)}>
@@ -94,6 +98,8 @@ const SkillMeter = ({
             setNumber(parseInt(width));
           }}
           variants={variants}
+          animate={animate}
+          initial={hidden}
         ></motion.div>
       </div>
     </div>

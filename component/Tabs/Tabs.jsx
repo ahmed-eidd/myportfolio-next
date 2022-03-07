@@ -5,7 +5,7 @@ import TabItem from './TabItem/TabItem';
 import TabContent from './TabContent/TabContent';
 import { extendClasses } from '../../utilities/extendClasses';
 
-const Tabs = ({ children, tabsLabel = [], className }) => {
+const Tabs = ({ children, tabsLabel = [], className, maxWidth }) => {
   const [currentTabIndex, SetCurrentTabIndex] = useState(0);
   const [currentTab, SetCurrentTab] = useState(tabsLabel[0]?.label);
   const [animatedTabPos, setAnimatedTabPos] = useState({ left: 0, right: 0 });
@@ -34,7 +34,12 @@ const Tabs = ({ children, tabsLabel = [], className }) => {
   }, [currentTab]);
 
   return (
-    <motion.div className={extendClasses(classes.Tabs, className)}>
+    <motion.div
+      className={extendClasses(classes.Tabs, className)}
+      style={{
+        minWidth: `${tabsLabel.length * 11.5}rem`,
+      }}
+    >
       <div className={classes.Tabs__TabItemsList} ref={tabItemsListRef}>
         <Slider
           style={{

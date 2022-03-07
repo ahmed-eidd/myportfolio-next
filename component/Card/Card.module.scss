@@ -1,0 +1,70 @@
+@import 'index';
+
+.Card {
+  display: grid;
+  grid-template-areas:
+    'icon title title .'
+    'icon year dot company';
+  grid-template-columns: min-content min-content min-content min-content;
+  justify-items: start;
+  align-items: center;
+  // width: clamp(50%, 100%, 33rem);
+  width: 100%;
+  grid-auto-rows: min-content;
+  background-color: $color-primary-gray;
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+  padding: 2rem;
+  border-radius: $radius-sm;
+  justify-content: start;
+  &__Icon {
+    grid-area: icon;
+    justify-self: center;
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: $radius-sm;
+  }
+
+  &__Title {
+    grid-area: title;
+    font-weight: bold;
+  }
+  &__Years {
+    grid-area: year;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__Company {
+    grid-area: company;
+  }
+}
+
+.Dot {
+  grid-area: dot;
+  justify-self: center;
+  align-self: center;
+  transform: translateY(3px);
+  width: 5px;
+  height: 5px;
+  background-color: $color-primary-white;
+  border-radius: $radius-lg;
+}
+
+.green {
+  background-color: $color-green;
+}
+
+.orange {
+  background-color: $color-orange;
+}
+
+.yellow {
+  background-color: $color-yellow;
+}
+
+.purple {
+  background-color: $color-purple;
+}

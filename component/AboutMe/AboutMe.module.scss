@@ -1,36 +1,87 @@
 @import 'index';
 
 .AboutMe {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
   &__Content {
     min-height: 60vh;
-    width: clamp(80%, 60vw, 90%);
+    width: clamp(60%, 110rem, 100%);
     background-color: $color-primary-darker;
     z-index: 100;
     border-radius: $radius-sm;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  &__Personal {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 4rem;
+
+    &__About {
+      &__Title {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      &__Text {
+        line-height: 2;
+      }
+    }
+
+    &__Interests {
+      &__Title {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+      }
+    }
   }
 
   &__Tabs {
-    width: 50%;
+    // min-width: 37rem;
   }
 
-  &__Skills,
   &__Experience,
   &__Education {
-    background-color: $color-primary-gray;
-    border-radius: $radius-sm;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 3rem;
   }
 
   &__Skills {
     padding: 1.5rem;
+    background-color: $color-primary-gray;
+    border-radius: $radius-sm;
+    position: relative;
+
     &__Skill {
       display: flex;
       flex-direction: column;
       padding: 1.5rem 0;
+    }
+
+    &__MoreSkillsBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      padding: 1rem 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      border-bottom-left-radius: $radius-sm;
+      border-bottom-right-radius: $radius-sm;
     }
   }
 }
@@ -49,4 +100,9 @@
 
 .purple {
   background-color: $color-purple;
+}
+
+.TextPurple {
+  color: $color-purple;
+  display: inline;
 }

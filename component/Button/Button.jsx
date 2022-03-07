@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import WithDotCursor from '../../hoc/withDotCursor/WithDotCursor';
 import classes from './Button.module.scss';
 
-const Button = ({ btnVariant, href, children, type = 'button' }) => {
+const Button = ({ onClick, btnVariant, href, children, type = 'button' }) => {
   return (
     <>
       {type === 'button' && (
         <motion.button
+          onClick={onClick}
           variants={btnVariant}
           className={classes.Button}
           whileHover={{
@@ -21,6 +23,7 @@ const Button = ({ btnVariant, href, children, type = 'button' }) => {
       )}
       {type === 'link' && (
         <motion.a
+          onClick={onClick}
           target='_blank'
           variants={btnVariant}
           href={href}
@@ -39,4 +42,4 @@ const Button = ({ btnVariant, href, children, type = 'button' }) => {
   );
 };
 
-export default Button;
+export default WithDotCursor(Button);
