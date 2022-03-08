@@ -70,10 +70,11 @@ const AboutMe = () => {
             </h2>
             <p className={classes.AboutMe__Personal__About__Text}>
               My name is <span className={classes.TextPurple}> Ahmed Eid </span>
-              a Front End Developer based in Cairo,Egypt. Like many other
+              a Front End Developer based in Cairo, Egypt. Like many other
               people, I enjoy spending my free time increasing my knowledge of
               Web Development and building new and challenging projects using
-              React,Redux,Gatsby and many Front end Technologies
+              <strong> React, Redux, NextJs</strong> and many Front end
+              Technologies
             </p>
           </div>
           <div className={classes.AboutMe__Personal__Interests}>
@@ -201,47 +202,28 @@ const AboutMe = () => {
           </div>
           <motion.div className={classes.AboutMe__Experience}>
             <Card
-              title='Freelancer'
-              yearFrom='2020'
-              company='Acme'
+              title='Front End Developer'
+              yearFrom='Oct 2020'
+              yearTo='Feb 2021'
+              company='Pharaoh Soft'
               color='purple'
               icon='briefcase-outline'
             />
             <Card
               title='Freelancer'
-              yearFrom='2020'
-              company='Acme'
-              color='purple'
-              icon='briefcase-outline'
-            />
-            <Card
-              title='Freelancer'
-              yearFrom='2020'
-              company='Acme'
-              color='purple'
+              yearFrom='Mar 2021'
+              company='Fiverr / Upwork'
+              color='green'
               icon='briefcase-outline'
             />
           </motion.div>
           <motion.div className={classes.AboutMe__Education}>
             <Card
-              title='Freelancer'
-              yearFrom='2020'
-              company='Acme'
+              title='Facutly of laws'
+              yearFrom='2015'
+              yearTo='2019'
               color='purple'
-              icon='briefcase-outline'
-            />
-            <Card
-              title='Freelancer'
-              yearFrom='2020'
-              company='Acme'
-              color='purple'
-              icon='briefcase-outline'
-            />
-            <Card
-              title='Freelancer'
-              yearFrom='2020'
-              company='Acme'
-              color='purple'
+              company='Cairo University'
               icon='briefcase-outline'
             />
           </motion.div>

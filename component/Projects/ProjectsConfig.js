@@ -16,7 +16,7 @@ export const projectsConfing = [
   {
     name: 'Movie Box',
     description:
-      'Movie Box is a Movie app where you can search and find your favourite movies and add them to your wishlist.',
+      'MoveBox is a movie project based on an online database of information related to films, television series, including cast, production crew and personal biographies, ratings.',
     tech: ['React', 'React Router', 'Redux', 'Redux-Thunk', 'Sass'],
     link: 'https://movieboxx.netlify.app/',
     github: 'https://github.com/ahmed-eidd/movie-app',
@@ -26,7 +26,7 @@ export const projectsConfing = [
   {
     name: 'Upstage',
     description:
-      'Website for a Theater in Chicago called Upstage, Built with Html Sass and Js',
+      'Upstage is a theater platform that all theatre professionals will use to manage their careers, performances, actors, production teams and help market performances to the public.',
     tech: ['React', 'Redux', 'React Router', 'Chakra UI'],
     link: 'https://upstage-site.netlify.app/',
     github: 'https://github.com/ahmed-eidd/upstage',

@@ -3,12 +3,11 @@
 .Card {
   display: grid;
   grid-template-areas:
-    'icon title title .'
+    'icon title title title'
     'icon year dot company';
-  grid-template-columns: min-content min-content min-content min-content;
+  // grid-template-columns: min-content min-content min-content min-content;
   justify-items: start;
   align-items: center;
-  // width: clamp(50%, 100%, 33rem);
   width: 100%;
   grid-auto-rows: min-content;
   background-color: $color-primary-gray;
@@ -35,10 +34,12 @@
     gap: 1rem;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.2rem;
   }
 
   &__Company {
     grid-area: company;
+    font-size: 1.2rem;
   }
 }
 
@@ -47,8 +48,8 @@
   justify-self: center;
   align-self: center;
   transform: translateY(3px);
-  width: 5px;
-  height: 5px;
+  width: 3px;
+  height: 3px;
   background-color: $color-primary-white;
   border-radius: $radius-lg;
 }

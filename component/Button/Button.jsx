@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import React, { useState  } from 'react';
+import React, { useState } from 'react';
 import WithDotCursor from '../../hoc/withDotCursor/WithDotCursor';
 import { extendClasses } from '../../utilities/extendClasses';
 import classes from './Button.module.scss';
 
-const Button = ({ btnVariant, href, children, type = 'button' }) => {
+const Button = ({ btnVariant, href, children, type = 'button', className }) => {
   const [theme, setTheme] = useState(false);
   const onClick = () => {
     setTheme(!theme);
@@ -23,7 +23,7 @@ const Button = ({ btnVariant, href, children, type = 'button' }) => {
             scale: 0.9,
           }}
         >
-          <p>{children}</p>
+          <span>{children}</span>
         </motion.button>
       )}
       {type === 'link' && (
@@ -32,7 +32,7 @@ const Button = ({ btnVariant, href, children, type = 'button' }) => {
           target='_blank'
           variants={btnVariant}
           href={href}
-          className={extendClasses(classes.Button, theme && classes.theme)}
+          className={extendClasses(classes.Button, className)}
           whileHover={{
             transform: 'translateX(4px)',
           }}
@@ -40,7 +40,7 @@ const Button = ({ btnVariant, href, children, type = 'button' }) => {
             scale: 0.9,
           }}
         >
-          <p>{children}</p>
+          <span>{children}</span>
         </motion.a>
       )}
     </>

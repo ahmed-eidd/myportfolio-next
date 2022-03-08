@@ -26,10 +26,14 @@ const Project = ({
         <p>{description}</p>
         <Skills skills={skills} />
         <div className={classes.Project__Btns} style={{ display: 'flex' }}>
-          <Button to={link}>Live Demo</Button>
-          <Button type='link' to={github}>
-            GIthub
+          <Button type='link' href={link}>
+            Live Demo
           </Button>
+          {github && (
+            <Button type='link' href={github}>
+              Github
+            </Button>
+          )}
         </div>
       </div>
     </motion.div>

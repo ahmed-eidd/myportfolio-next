@@ -30,6 +30,7 @@ const vr = {
 const Projects = () => {
   return (
     <motion.div
+      id='ref2'
       className={classes.Projects}
       viewport={{ once: true }}
       variants={{
@@ -42,7 +43,7 @@ const Projects = () => {
       initial='hidden'
       whileInView='show'
       // exit='hidden'
-      id='ref1'
+
     >
       {projectsConfing.map((prj, i) => (
         <Project
@@ -51,6 +52,7 @@ const Projects = () => {
           description={prj.description}
           img={prj.img}
           link={prj.link}
+          github={prj.github}
           skills={prj.tech}
           key={prj.name}
         />

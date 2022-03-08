@@ -10,6 +10,8 @@ import { motion } from 'framer-motion';
 import Projects from '../component/Projects/Projects';
 import AboutMe from '../component/AboutMe/AboutMe';
 import Tabs from '../component/Tabs/Tabs';
+import SplashScreen from '../component/SplashScreen/SplashScreen';
+import LoadingScreen from '../component/LoadingScreen/LoadingScreen';
 
 export default function Home() {
   return (

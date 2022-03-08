@@ -9,7 +9,10 @@ const Header = () => {
     <div className={classes.Header}>
       <div className={classes.Header__Content}>
         <div className={classes.Header__Titles}>
-          <p>SOCIALS</p>
+          <h2>
+            Ahmed Eid
+          </h2>
+          <p>Front/React End Developer </p>
           <Divider />
         </div>
         <div className={classes.Header__SectionLinks}>

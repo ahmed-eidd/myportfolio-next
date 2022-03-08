@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 import Script from 'next/script';
 import MouseContextProvider from '../context/mouse-context';
@@ -14,7 +15,9 @@ function MyApp({ Component, pageProps }) {
         nomodule
         src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'
       ></Script>
-      <Component {...pageProps} />
+      
+        <Component {...pageProps} />
+      
     </MouseContextProvider>
   );
 }
