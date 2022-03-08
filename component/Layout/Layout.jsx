@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
   }, []);
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false);
+      setLoading(true);
     }, 3000);
   }, []);
   console.log(loading);
