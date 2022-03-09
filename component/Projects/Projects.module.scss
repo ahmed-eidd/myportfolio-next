@@ -3,5 +3,23 @@
 .Projects {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 7rem;
+
+  &__Info {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__Title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  &__Divider {
+    width: 100%;
+  }
 }

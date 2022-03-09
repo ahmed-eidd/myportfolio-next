@@ -5,7 +5,11 @@ import SectionLink from '../SectionLink/SectionLink';
 import Span from '../Span/Span';
 import classes from './Header.module.scss';
 
-const Header = () => {
+const Header = ({ aboutRef, projectsRef }) => {
+  const onScrollHandler = (ref) => {
+    ref?.current?.scrollIntoView({ behavior: 'smooth',  });
+  };
+
   return (
     <div className={classes.Header}>
       <div className={classes.Header__Content}>
@@ -19,8 +23,18 @@ const Header = () => {
           <Divider />
         </div>
         <div className={classes.Header__SectionLinks}>
-          <SectionLink name='Projects' />
-          <SectionLink name='About Me' />
+          <SectionLink
+            onClick={() => {
+              onScrollHandler(projectsRef);
+            }}
+            name='Projects'
+          />
+          <SectionLink
+            onClick={() => {
+              onScrollHandler(aboutRef);
+            }}
+            name='About Me'
+          />
         </div>
         <div className={classes.Header__Links}>
           <Link

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import Divider from '../Divider/Divider';
 import Project from '../Project/Project';
 import classes from './Projects.module.scss';
 import { projectsConfing } from './ProjectsConfig';
@@ -43,8 +44,11 @@ const Projects = () => {
       initial='hidden'
       whileInView='show'
       // exit='hidden'
-
     >
+      <div className={classes.Projects__Info}>
+        <h2 className={classes.Projects__Title}>My Projects</h2>
+        <Divider className={classes.Projects__Divider} />
+      </div>
       {projectsConfing.map((prj, i) => (
         <Project
           variants={vr}
