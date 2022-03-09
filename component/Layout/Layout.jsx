@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
+import { useTablet } from '../../hooks/useMediaQuery';
 import DotCursor from '../DotCursor/DotCursor';
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import Canvas from '../Particles/Particles';
@@ -13,10 +14,9 @@ const Layout = ({ children }) => {
   }, []);
   useEffect(() => {
     setTimeout(() => {
-      setLoading(true);
+      setLoading(false);
     }, 3000);
   }, []);
-  console.log(loading);
   return (
     <motion.div>
       {/* {loading && <LoadingScreen />} */}

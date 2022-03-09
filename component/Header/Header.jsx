@@ -2,6 +2,7 @@ import React from 'react';
 import Divider from '../Divider/Divider';
 import Link from '../Link/Link';
 import SectionLink from '../SectionLink/SectionLink';
+import Span from '../Span/Span';
 import classes from './Header.module.scss';
 
 const Header = () => {
@@ -10,15 +11,16 @@ const Header = () => {
       <div className={classes.Header__Content}>
         <div className={classes.Header__Titles}>
           <h2>
-            Ahmed Eid
+            Ahmed <Span>Eid</Span>
           </h2>
-          <p>Front/React End Developer </p>
+          <p>
+            Front / React End<Span color='green'> Developer </Span>
+          </p>
           <Divider />
         </div>
         <div className={classes.Header__SectionLinks}>
           <SectionLink name='Projects' />
           <SectionLink name='About Me' />
-          <SectionLink name='Contact' />
         </div>
         <div className={classes.Header__Links}>
           <Link icon='logo-github' href='#' name='Github' newTab />

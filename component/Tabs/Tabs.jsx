@@ -37,7 +37,7 @@ const Tabs = ({ children, tabsLabel = [], className, maxWidth }) => {
     <motion.div
       className={extendClasses(classes.Tabs, className)}
       style={{
-        minWidth: `${tabsLabel.length * 11.5}rem`,
+        width: `clamp(${tabsLabel.length * 11.5}rem,40%,90%)`,
       }}
     >
       <div className={classes.Tabs__TabItemsList} ref={tabItemsListRef}>
