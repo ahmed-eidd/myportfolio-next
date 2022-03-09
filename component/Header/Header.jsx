@@ -23,12 +23,30 @@ const Header = () => {
           <SectionLink name='About Me' />
         </div>
         <div className={classes.Header__Links}>
-          <Link icon='logo-github' href='#' name='Github' newTab />
-          <Link icon='logo-linkedin' href='#' name='Linkedin' newTab />
-          <Link icon='document-text-outline' href='#' name='Resume' newTab />
-          <Link icon='mail-unread-outline' href='#' name='Email' newTab>
-            AhmedEid.webdev@gmail.com
-          </Link>
+          <Link
+            icon='logo-github'
+            href='https://github.com/ahmed-eidd'
+            name='Github'
+            newTab
+          />
+          <Link
+            icon='logo-linkedin'
+            href='https://www.linkedin.com/in/ahmed-eidd/'
+            name='Linkedin'
+            newTab
+          />
+          <Link
+            icon='document-text-outline'
+            href='https://drive.google.com/file/d/1llEvVaj36Ap1zPTzUZ3wXB1t5j0BY0Z4/view?usp=sharing'
+            name='Resume'
+            newTab
+          />
+          <Link
+            icon='mail-unread-outline'
+            href='mailto:ahmedeid.webdev@gmail.com'
+            name='Email Me'
+            newTab
+          ></Link>
         </div>
       </div>
     </div>
