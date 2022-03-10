@@ -44,6 +44,11 @@ body {
     $color-primary-darker,
     $color-primary-gray
   );
+
+  @include mobile {
+    background: $color-primary-gray;
+  }
+
   color: $color-primary-white;
   box-sizing: border-box;
   padding: 0;
