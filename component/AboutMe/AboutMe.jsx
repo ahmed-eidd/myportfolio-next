@@ -118,14 +118,22 @@ const AboutMe = () => {
                   className={classes.AboutMe__Skills__Skill}
                   skill='NextJs'
                   color='green'
-                  percentage={80}
+                  percentage={90}
+                  variants={MeterAnimation(80)}
+                  textVariant={textAnimation}
+                />
+                <SkillMeter
+                  className={classes.AboutMe__Skills__Skill}
+                  skill='Typescript'
+                  color='yellow'
+                  percentage={90}
                   variants={MeterAnimation(80)}
                   textVariant={textAnimation}
                 />
                 <SkillMeter
                   className={classes.AboutMe__Skills__Skill}
                   skill='Redux'
-                  color='yellow'
+                  color='orange'
                   percentage={90}
                   variants={MeterAnimation(90)}
                   textVariant={textAnimation}
@@ -133,7 +141,7 @@ const AboutMe = () => {
                 <SkillMeter
                   className={classes.AboutMe__Skills__Skill}
                   skill='Redux-Saga'
-                  color='orange'
+                  color='purple'
                   percentage={85}
                   variants={MeterAnimation(85)}
                   textVariant={textAnimation}
@@ -141,7 +149,7 @@ const AboutMe = () => {
                 <SkillMeter
                   className={classes.AboutMe__Skills__Skill}
                   skill='Redux Thunk'
-                  color='purple'
+                  color='green'
                   percentage={85}
                   variants={MeterAnimation(85)}
                   textVariant={textAnimation}
@@ -203,16 +211,17 @@ const AboutMe = () => {
           <motion.div className={classes.AboutMe__Experience}>
             <Card
               title='Front End Developer'
-              yearFrom='Oct 2020'
-              yearTo='Feb 2021'
-              company='Pharaoh Soft'
+              yearFrom='Nov 2022'
+              yearTo='Present'
+              company='Taqneen Solutions'
               color='purple'
               icon='briefcase-outline'
             />
             <Card
-              title='Freelancer'
-              yearFrom='Mar 2021'
-              company='Fiverr / Upwork'
+              title='Front End Developer'
+              yearFrom='June 2022'
+              yearTo='Nov 2022'
+              company='Hyper Media Labs'
               color='green'
               icon='briefcase-outline'
             />

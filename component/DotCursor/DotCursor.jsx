@@ -3,6 +3,7 @@ import classes from './DotCursor.module.scss';
 import useMousePosition from '../../hooks/useMousePosition';
 import { MouseContext } from '../../context/mouse-context';
 import { useTablet } from '../../hooks/useMediaQuery';
+import { motion } from 'framer-motion';
 
 const DotCursor = () => {
   const { cursorType, cursorChangeHandler } = useContext(MouseContext);
@@ -13,18 +14,23 @@ const DotCursor = () => {
     <>
       {!tablet && (
         <>
-          <div
-            style={{ left: `${x}px`, top: `${y}px` }}
+          <motion.div
+            // style={{ left: `${x}px`, top: `${y}px` }}
+            animate={{
+              left: x,
+              top: y
+            }}
+
             className={[classes.ring, cursorType && classes.ring_hovered].join(
               ' '
             )}
-          ></div>
-          <div
+          ></motion.div>
+          <motion.div
             className={[classes.dot, cursorType && classes.dot_hovered].join(
               ' '
             )}
-            style={{ left: `${x}px`, top: `${y}px` }}
-          ></div>
+            animate={{ left: x, top: y }}
+          ></motion.div>
         </>
       )}
     </>

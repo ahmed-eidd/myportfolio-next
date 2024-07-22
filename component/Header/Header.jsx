@@ -4,7 +4,6 @@ import Link from '../Link/Link';
 import SectionLink from '../SectionLink/SectionLink';
 import Span from '../Span/Span';
 import classes from './Header.module.scss';
-import AnimatedText from '../AnimatedText/AnimatedText';
 import { motion } from 'framer-motion';
 
 const container = {
@@ -38,7 +37,6 @@ const Header = ({ aboutRef, projectsRef }) => {
             animate='visible'
             variants={container}
           >
-            <AnimatedText text='hello world' tag='heading2' />
           </motion.div>
         </div>
 
@@ -70,10 +68,11 @@ const Header = ({ aboutRef, projectsRef }) => {
             newTab
           />
           <Link
+            download
             icon='document-text-outline'
-            href='https://drive.google.com/file/d/1t4ORNkuZFUsgbXv5S4ks_w4TBfE8PRve/view?usp=sharing'
+            href='/Projects/Ahmed-Eid-Resume.pdf'
             name='Resume'
-            newTab
+            // newTab
           />
           <Link
             icon='mail-unread-outline'
