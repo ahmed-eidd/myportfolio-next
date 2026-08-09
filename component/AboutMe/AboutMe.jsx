@@ -66,20 +66,23 @@ const AboutMe = () => {
         <div className={classes.AboutMe__Personal}>
           <div className={classes.AboutMe__Personal__About}>
             <h2 className={classes.AboutMe__Personal__About__Title}>
-              About ME
+              Profile
             </h2>
             <p className={classes.AboutMe__Personal__About__Text}>
-              My name is <span className={classes.TextPurple}> Ahmed Eid </span>
-              a Front End Developer based in Cairo, Egypt. Like many other
-              people, I enjoy spending my free time increasing my knowledge of
-              Web Development and building new and challenging projects using
-              <strong> React, Redux, NextJs</strong> and many Front end
-              Technologies
+              Front End Developer with 4+ years of experience building scalable,
+              high-performance web applications using React, Next.js, TypeScript,
+              and modern frontend technologies. Experienced in leading frontend
+              development, designing reusable component systems, optimizing
+              application performance, and modernizing large-scale applications
+              through framework migrations and improved architecture. Proven track
+              record of delivering production-ready solutions for SaaS, e-commerce,
+              travel, and enterprise platforms while collaborating with
+              cross-functional teams to create responsive, user-focused products.
             </p>
           </div>
           <div className={classes.AboutMe__Personal__Interests}>
             <h2 className={classes.AboutMe__Personal__Interests__Title}>
-              Interests
+              Outside the screen
             </h2>
             <Skills skills={['Chess', 'Video Games', 'Reading', 'Movies']} />
           </div>

@@ -1,62 +1,55 @@
 @import 'index';
 
 .Project {
-  background-color: $color-primary-darker;
-  width: clamp(60%, 110rem, 70%);
-  height: 25rem;
-  margin: auto;
+  position: relative;
   display: flex;
-  z-index: 100;
-  // border-radius: $radius-sm;
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
-  justify-content: flex-start;
-  align-items: flex-start;
+  background: rgba($color-primary-darker, 0.7);
+  border: 1px solid rgba($color-primary-white, 0.1);
+  border-radius: 0.8rem;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 
-  @include tablet {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    gap: 2rem;
-    padding-bottom: 5rem;
+  &:hover {
+    transform: translateY(-0.5rem);
+    border-color: rgba(155, 201, 189, 0.4);
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
   }
 
+  &__ImgWrapper { position: relative; width: 100%; height: 21rem; overflow: hidden; }
+  &__Img { position: relative; width: 100%; height: 100%; }
+  &__Img img { transition: transform 0.5s ease; }
+  &:hover &__Img img { transform: scale(1.03); }
 
-  @include mobile {
-    width: 90%;
+  &__Overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 45%, rgba($color-primary-darker, 0.68));
   }
 
-  &__Img {
-    height: 100%;
-    position: relative;
-    width: clamp(44.4rem, 12rem, 100%);
-
-    @include tablet {
-      width: 100%;
-      height: 40rem;
-    }
-  }
-
-  &__TextContainer {
+  &__Content {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    height: 100%;
-    width: calc(100% - 44.4rem);
-    padding: 0 2rem;
-
-    @include tablet {
-      width: 100%;
-      gap: 3rem;
-    }
+    gap: 1.5rem;
+    padding: 2rem;
   }
 
-  &__Btns {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 2rem;
-    margin-left: auto;
-  }
+  &__Header { display: flex; align-items: center; gap: 1.1rem; }
+  &__Icon { display: flex; align-items: center; justify-content: center; width: 4.2rem; height: 4.2rem; flex-shrink: 0; border: 1px solid rgba(155, 201, 189, 0.35); border-radius: 0.4rem; color: #9bc9bd; font-family: monospace; font-size: 1.1rem; font-weight: 700; }
+  &__Label { display: block; margin-bottom: 0.3rem; color: rgba($color-primary-white, 0.4); font-size: 1rem; }
+  &__Name { margin: 0; color: $color-primary-white; font-size: 1.8rem; font-weight: 500; }
+  &__Description { flex: 1; color: rgba($color-primary-white, 0.62); font-size: 1.4rem; line-height: 1.7; }
+  &__TechStack { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  &__Tech { padding: 0.4rem 0.7rem; color: rgba($color-primary-white, 0.7); font-size: 0.75rem; background: rgba($color-primary-white, 0.05); border: 1px solid rgba($color-primary-white, 0.1); border-radius: 0.3rem; }
+  &__Actions { display: flex; gap: 0.8rem; margin-top: auto; padding-top: 1.4rem; border-top: 1px solid rgba($color-primary-white, 0.09); }
+  &__Link { display: inline-flex; flex: 1; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.9rem 1rem; border-radius: 0.35rem; font-size: 1rem; font-weight: 600; text-decoration: none; transition: background 0.3s ease, border-color 0.3s ease; }
+  &__LinkPrimary { color: #0b1418; background: #9bc9bd; }
+  &__LinkPrimary:hover { background: #b1d9cd; }
+  &__LinkSecondary { color: $color-primary-white; background: rgba($color-primary-white, 0.04); border: 1px solid rgba($color-primary-white, 0.16); }
+  &__LinkSecondary:hover { border-color: rgba(155, 201, 189, 0.4); }
+  &__Featured { position: absolute; top: 1.2rem; right: 1.2rem; z-index: 2; padding: 0.5rem 0.7rem; color: #0b1418; font-size: 0.75rem; font-weight: 600; background: #9bc9bd; border-radius: 0.3rem; }
 }
+
+@media (max-width: 768px) { .Project__ImgWrapper { height: 21rem; } }

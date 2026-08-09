@@ -1,8 +1,13 @@
 @import 'index';
 
 .Tabs {
+  width: min(100%, 62rem) !important;
   &__TabItemsList {
-    padding: 1rem 0;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    background: rgba($color-primary-darker, 0.72);
+    border: 1px solid rgba($color-primary-white, 0.1);
+    border-radius: 0.6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,8 +17,9 @@
 
 .Slider {
   position: absolute;
-  background-color: $color-primary-gray;
-  border-radius: $radius-sm;
+  background-color: rgba($color-purple, 0.18);
+  border: 1px solid rgba($color-purple, 0.45);
+  border-radius: 0.4rem;
   width: 11.5rem;
-  height: 10rem;
+  height: calc(100% - 1rem);
 }

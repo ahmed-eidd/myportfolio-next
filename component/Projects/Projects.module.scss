@@ -1,25 +1,51 @@
 @import 'index';
 
 .Projects {
-  display: flex;
-  flex-direction: column;
-  gap: 7rem;
+  --signal: #9bc9bd;
+  padding: 6rem 0 7rem;
 
-  &__Info {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+  &__Header {
+    max-width: 82rem;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
   }
+
+  &__Eyebrow {
+    margin-bottom: 1rem;
+    color: rgba($color-primary-white, 0.45);
+    font-size: 1.2rem;
+  }
+
+  &__HeadingRow { margin-bottom: 1.4rem; }
 
   &__Title {
-    font-size: 3rem;
-    text-align: center;
+    margin: 0;
+    color: $color-primary-white;
+    font-size: clamp(3rem, 5vw, 5.2rem);
+    font-weight: 500;
+    letter-spacing: -0.04em;
   }
 
-  &__Divider {
-    width: 100%;
+  &__Subtitle {
+    max-width: 52rem;
+    margin: 0;
+    color: rgba($color-primary-white, 0.58);
+    font-size: 1.4rem;
+    line-height: 1.7;
   }
+
+  &__Grid {
+    display: grid;
+    grid-template-columns: minmax(0, 82rem);
+    gap: 1.8rem;
+    max-width: 82rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+}
+
+@include tablet {
+  .Projects { padding: 5rem 0 6rem; }
+  .Projects__Header { padding: 0 1.5rem; margin-bottom: 3rem; }
+  .Projects__Grid { padding: 0 1.5rem; }
 }
